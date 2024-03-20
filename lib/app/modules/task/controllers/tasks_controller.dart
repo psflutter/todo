@@ -4,7 +4,7 @@ import 'package:todo_app/app/repositories/task_repository.dart';
 
 class TasksController extends GetxController {
   String appName = "Todo App";
-  var tasks = <Task>[].obs;
+  List<Task> tasks = <Task>[].obs;
   late TaskRepository _taskRepository;
 
   TasksController() {
