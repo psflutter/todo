@@ -63,7 +63,6 @@ class TaskItemWidget extends GetWidget<TasksController> {
                                       onPressed: () {
                                         controller.handleDelete(index);
                                         Get.back();
-                                        // Navigator.of(context).pop();
                                       },
                                       child: const Text('Confirm'),
                                     ),

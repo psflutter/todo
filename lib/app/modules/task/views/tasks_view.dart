@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import 'package:todo_app/app/modules/task/controllers/tasks_controller.dart';
 import 'package:todo_app/app/modules/task/widgets/task_item_widget.dart';
 import 'package:todo_app/app/routes/app_pages.dart';
-
-import '../controllers/tasks_controller.dart';
 
 class TasksView extends GetView<TasksController> {
   const TasksView({Key? key}) : super(key: key);
