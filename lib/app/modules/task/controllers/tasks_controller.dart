@@ -18,7 +18,6 @@ class TasksController extends GetxController {
   }
 
   void getTasks() async {
-    tasks.value = [];
     tasks.addAll(await _taskRepository.getTasks());
   }
 
@@ -28,8 +27,10 @@ class TasksController extends GetxController {
   }
 
   void handleTap(int index) async {
-    tasks[index].status = "Complated";
-    tasks.value = [...tasks];
-    await _taskRepository.updateTask(tasks);
+    if (tasks[index].status != "Complated") {
+      tasks[index].status = "Complated";
+      tasks.value = [...tasks];
+      await _taskRepository.updateTask(tasks);
+    }
   }
 }
