@@ -17,8 +17,8 @@ class TasksController extends GetxController {
     super.onInit();
   }
 
-  void getTasks() async {
-    tasks.addAll(await _taskRepository.getTasks());
+  void getTasks() {
+    tasks.addAll(_taskRepository.getTasks());
   }
 
   void handleDelete(int index) async {
