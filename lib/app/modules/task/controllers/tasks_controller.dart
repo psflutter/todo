@@ -28,8 +28,7 @@ class TasksController extends GetxController {
 
   void handleTap(int index) async {
     if (tasks[index].status != "Complated") {
-      tasks[index].status = "Complated";
-      tasks.value = [...tasks];
+      tasks[index] = Task(status: "Complated", title: tasks[index].title);
       await _taskRepository.updateTask(tasks);
     }
   }
