@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_app/app/modules/task/controllers/tasks_controller.dart';
-import 'package:todo_app/app/modules/task/models/task_model.dart';
 
 class TaskItemWidget extends GetWidget<TasksController> {
   int index;
-  Task task;
-  TaskItemWidget(this.task, this.index, {super.key});
+ 
+  TaskItemWidget( this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {

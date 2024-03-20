@@ -27,8 +27,7 @@ class TasksView extends GetView<TasksController> {
                 ? const Center(child: Text("Task not found."))
                 : ListView.builder(
                     itemCount: controller.tasks.length,
-                    itemBuilder: (context, index) =>
-                        TaskItemWidget(controller.tasks[index], index)),
+                    itemBuilder: (context, index) => TaskItemWidget(index)),
           ),
         ));
   }
