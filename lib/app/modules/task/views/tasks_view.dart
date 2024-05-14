@@ -23,7 +23,7 @@ class TasksView extends GetView<TasksController> {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Obx(
-            () => controller.tasks.length == 0
+            () => controller.tasks.isEmpty
                 ? const Center(child: Text("Task not found."))
                 : ListView.builder(
                     itemCount: controller.tasks.length,

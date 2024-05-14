@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import 'package:todo_app/app/modules/task/controllers/tasks_controller.dart';
 
 class TaskItemWidget extends GetWidget<TasksController> {
-  int index;
- 
-  TaskItemWidget( this.index, {super.key});
+  final int index;
+
+  const TaskItemWidget(this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {
